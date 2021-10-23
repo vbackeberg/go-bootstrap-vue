@@ -1,6 +1,8 @@
 <template>
   <navbar></navbar>
-  <router-view></router-view>
+  <main class="mt-4">
+    <router-view></router-view>
+  </main>
 </template>
 
 <script lang="ts">
