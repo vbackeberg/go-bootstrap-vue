@@ -148,7 +148,7 @@
 
   </details>
 
-8. Add 4 placeholder cards that appear while `loading` is `true`.
+8. Add 4 [placeholder cards](https://getbootstrap.com/docs/5.1/components/placeholders/) that appear while `loading` is `true`.
 
    <details>
    <summary>Code hint here</summary>
