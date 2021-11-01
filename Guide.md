@@ -189,7 +189,7 @@
 
   </details>
 
-9. [Customize our global theme](https://getbootstrap.com/docs/5.1/customize/sass/#variable-defaults) with Netlight colors and button font weight.
+9. [Customize our global theme](https://getbootstrap.com/docs/5.1/customize/sass/#variable-defaults) with [Netlight colors](https://netlight365beta.sharepoint.com/sites/CommunicationsDesign/SitePages/Brandbook.aspx#colors) and button font weight.
 
    <details>
    <summary>Code hint here</summary>
@@ -205,6 +205,177 @@
    $btn-font-weight: 600;
    ```
 
+  </details>
+
+10. On to the Boids component: Create a [Bootstrap Container](https://getbootstrap.com/docs/5.1/layout/containers/) with a title.
+
+    <details>
+    <summary>Code hint here</summary>
+
+    #### **`Boids.vue`**
+
+    ```html
+    <div class="container">
+      <h1 class="mb-5">Available Boids</h1>
+    </div>
+    ```
+
     </details>
 
-10.
+11. Display the boids in a table.
+
+    <details>
+    <summary>Code hint here</summary>
+
+    #### **`Boids.vue`**
+
+    ```html
+    <table class="table table-hover">
+      <thead class="table-light">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Availabe from</th>
+          <th scope="col">Skillset</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="boid in boids" v-bind:key="boid.id">
+          <td>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" />
+            </div>
+          </td>
+          <td>{{ boid.firstName }}</td>
+          <td>{{ boid.lastName }}</td>
+          <td>{{ boid.availableFrom }}</td>
+          <td>{{ boid.skillset }}</td>
+        </tr>
+      </tbody>
+    </table>
+    ```
+
+    </details>
+
+12. Add a loading animation.
+
+    <details>
+    <summary>Code hint here</summary>
+
+    #### **`Boids.vue`**
+
+    ```html
+    <div
+      v-if="loading"
+      class="position-absolute top-50 start-50 translate-middle d-flex gap-3"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
+      <div
+        class="spinner-grow text-primary text-opacity-75"
+        role="status"
+      ></div>
+      <div
+        class="spinner-grow text-primary text-opacity-50"
+        role="status"
+      ></div>
+      <div
+        class="spinner-grow text-primary text-opacity-25"
+        role="status"
+      ></div>
+    </div>
+    </div>
+    ```
+
+    </details>
+
+13. Create a button that opens a [Bootstrap Modal](https://getbootstrap.com/docs/5.1/components/modal/).
+
+      <details>
+      <summary>Code hint here</summary>
+
+    #### **`Boids.vue`**
+
+    ```html
+    <div class="d-flex justify-content-end mb-3">
+      <button
+        class="btn btn-outline-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#addBoidModal"
+      >
+        Add Boid
+      </button>
+    </div>
+
+    ...
+
+    <div class="modal fade" id="addBoidModal" tabindex="-1">
+      <div
+        class="modal-dialog modal-lg modal-fullscreen-md-down modal-dialog-centered"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addBoidModalLabel">Add new boid</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    ```
+
+      </details>
+
+14. Add a form inside the modal.
+
+    <details>
+    <summary>Code hint here</summary>
+
+    #### **`Boids.vue`**
+
+    ```html
+    <form>
+      <div class="container-fluid">
+        <div class="row row-cols-2">
+          <div class="col">
+            <label for="first-name" class="col-form-label">First name</label>
+            <input type="text" class="form-control" id="first-name" />
+          </div>
+          <div class="col">
+            <label for="last-name" class="col-form-label">Last name</label>
+            <input type="text" class="form-control" id="last-name" />
+          </div>
+        </div>
+        <div class="row row-cols-2">
+          <div class="col">
+            <label for="available-from" class="col-form-label"
+              >Available from</label
+            >
+            <input class="form-control" id="available-from" />
+          </div>
+          <div class="col">
+            <label for="skillset" class="col-form-label">Skillset</label>
+            <textarea class="form-control" id="skillset"></textarea>
+          </div>
+        </div>
+      </div>
+    </form>
+    ```
+
+    </details>
+
+15. 
