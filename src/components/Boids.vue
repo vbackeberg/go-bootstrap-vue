@@ -10,50 +10,48 @@
         Add Boid
       </button>
     </div>
-    <div class="p-3 shadow">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Availabe from</th>
-            <th scope="col">Skillset</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="boid in boids" v-bind:key="boid.id">
-            <td>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" />
-              </div>
-            </td>
-            <td>{{ boid.firstName }}</td>
-            <td>{{ boid.lastName }}</td>
-            <td>{{ boid.availableFrom }}</td>
-            <td>{{ boid.skillset }}</td>
-          </tr>
-        </tbody>
-      </table>
+    <table class="table table-hover">
+      <thead class="table-light">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Availabe from</th>
+          <th scope="col">Skillset</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="boid in boids" v-bind:key="boid.id">
+          <td>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" />
+            </div>
+          </td>
+          <td>{{ boid.firstName }}</td>
+          <td>{{ boid.lastName }}</td>
+          <td>{{ boid.availableFrom }}</td>
+          <td>{{ boid.skillset }}</td>
+        </tr>
+      </tbody>
+    </table>
 
+    <div
+      v-if="loading"
+      class="position-absolute top-50 start-50 translate-middle d-flex gap-3"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
       <div
-        v-if="loading"
-        class="position-absolute top-50 start-50 translate-middle d-flex gap-3"
-      >
-        <div class="spinner-grow text-primary" role="status"></div>
-        <div
-          class="spinner-grow text-primary text-opacity-75"
-          role="status"
-        ></div>
-        <div
-          class="spinner-grow text-primary text-opacity-50"
-          role="status"
-        ></div>
-        <div
-          class="spinner-grow text-primary text-opacity-25"
-          role="status"
-        ></div>
-      </div>
+        class="spinner-grow text-primary text-opacity-75"
+        role="status"
+      ></div>
+      <div
+        class="spinner-grow text-primary text-opacity-50"
+        role="status"
+      ></div>
+      <div
+        class="spinner-grow text-primary text-opacity-25"
+        role="status"
+      ></div>
     </div>
   </div>
 

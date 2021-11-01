@@ -3,7 +3,7 @@
     <h1 class="mb-5">Assignments</h1>
     <div class="row gy-5 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
       <div v-for="assignment in assignments" v-bind:key="assignment.id">
-        <div class="card shadow">
+        <div class="card">
           <img src="@/assets/example-logo.png" class="img-fluid" />
           <div class="card-body">
             <h5 class="card-title">{{ assignment.name }}</h5>
@@ -18,7 +18,7 @@
 
       <template v-if="loading">
         <div v-for="i in [1, 2, 3, 4]" v-bind:key="i">
-          <div class="card shadow">
+          <div class="card">
             <div style="height: 180px" class="bg-dark bg-opacity-25"></div>
             <div class="card-body">
               <h5 class="card-title placeholder-glow">
