@@ -6,6 +6,7 @@
    ```bash
     git clone https://github.com/vbackeberg/go-bootstrap-vue.git
     npm install
+    git checkout start-here
    ```
 2. Import bootstrap styles.
 
