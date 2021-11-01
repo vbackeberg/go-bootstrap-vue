@@ -1,5 +1,7 @@
 # Go Bootstrap Vue
 
+➡️ [Click here to reach the step by step guide](https://github.com/vbackeberg/go-bootstrap-vue/blob/master/Guide.md)
+
 ## Project setup
 ```
 npm install
