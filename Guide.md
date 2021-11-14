@@ -290,7 +290,7 @@
 
     </details>
 
-13. Create a button that opens a [Bootstrap Modal](https://getbootstrap.com/docs/5.1/components/modal/).
+13. Create a button on top of the table that opens a [Bootstrap Modal](https://getbootstrap.com/docs/5.1/components/modal/).
 
       <details>
       <summary>Code hint here</summary>
