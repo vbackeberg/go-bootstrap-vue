@@ -307,7 +307,7 @@
       </button>
     </div>
 
-    ...
+    ...[below table]
 
     <div class="modal fade" id="addBoidModal" tabindex="-1">
       <div
