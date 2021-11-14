@@ -348,32 +348,34 @@
     #### **`Boids.vue`**
 
     ```html
-    <form>
-      <div class="container-fluid">
-        <div class="row row-cols-2">
-          <div class="col">
-            <label for="first-name" class="col-form-label">First name</label>
-            <input type="text" class="form-control" id="first-name" />
+    <div class="modal-body">
+      <form>
+        <div class="container-fluid">
+          <div class="row row-cols-2">
+            <div class="col">
+              <label for="first-name" class="col-form-label">First name</label>
+              <input type="text" class="form-control" id="first-name" />
+            </div>
+            <div class="col">
+              <label for="last-name" class="col-form-label">Last name</label>
+              <input type="text" class="form-control" id="last-name" />
+            </div>
           </div>
-          <div class="col">
-            <label for="last-name" class="col-form-label">Last name</label>
-            <input type="text" class="form-control" id="last-name" />
+          <div class="row row-cols-2">
+            <div class="col">
+              <label for="available-from" class="col-form-label"
+                >Available from</label
+              >
+              <input class="form-control" id="available-from" />
+            </div>
+            <div class="col">
+              <label for="skillset" class="col-form-label">Skillset</label>
+              <textarea class="form-control" id="skillset"></textarea>
+            </div>
           </div>
         </div>
-        <div class="row row-cols-2">
-          <div class="col">
-            <label for="available-from" class="col-form-label"
-              >Available from</label
-            >
-            <input class="form-control" id="available-from" />
-          </div>
-          <div class="col">
-            <label for="skillset" class="col-form-label">Skillset</label>
-            <textarea class="form-control" id="skillset"></textarea>
-          </div>
-        </div>
-      </div>
-    </form>
+      </form>
+    </div>
     ```
 
     </details>
