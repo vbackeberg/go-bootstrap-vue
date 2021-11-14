@@ -285,7 +285,6 @@
         role="status"
       ></div>
     </div>
-    </div>
     ```
 
     </details>
@@ -379,4 +378,4 @@
 
     </details>
 
-15. 
+15.
