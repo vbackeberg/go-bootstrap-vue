@@ -13,7 +13,7 @@
    <details>
    <summary>Code hint here</summary>
 
-   #### **`Assignments.vue`**
+   #### **`App.vue`**
 
    ```scss
    @import "../node_modules/bootstrap/scss/bootstrap";
