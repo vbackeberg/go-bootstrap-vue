@@ -24,3 +24,6 @@ pnpm-debug.log*
 
 # local history
 .history
+
+# vs code
+*.code-workspace
